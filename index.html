@@ -1,0 +1,390 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F&N Mobile Auto Repair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --red: #e63939;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url('https://picsum.photos/id/1074/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .red-accent {
+            color: #e63939;
+        }
+        
+        .speaker-bg {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100">
+    <!-- Navbar -->
+    <nav class="bg-black border-b border-red-900 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">F</div>
+                <div>
+                    <span class="text-3xl font-bold tracking-tighter">F&amp;N</span>
+                    <span class="text-red-500 text-xl font-semibold block -mt-1">AUTO REPAIR</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#services" class="hover:text-red-500 transition-colors">SERVICES</a>
+                <a href="#audio" class="hover:text-red-500 transition-colors">AUDIO</a>
+                <a href="#about" class="hover:text-red-500 transition-colors">ABOUT</a>
+                <a href="#contact" class="hover:text-red-500 transition-colors">CONTACT</a>
+            </div>
+            
+            <a href="tel:2524174854" 
+               class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all">
+                <i class="fa-solid fa-phone"></i>
+                <span>CALL (252) 417-4854</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-red-900/70 text-red-300 text-sm px-4 py-2 rounded-full mb-6">
+                    <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                    MOBILE SERVICE • WE COME TO YOU
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-4">
+                    QUALITY SERVICE<br>YOU CAN <span class="red-accent">HEAR</span>
+                </h1>
+                <p class="text-2xl text-zinc-400 mb-8">Reliability you can trust</p>
+                
+                <div class="flex items-center gap-4">
+                    <a href="#contact" 
+                       class="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-2xl text-lg font-semibold inline-flex items-center gap-3 transition-all">
+                        <i class="fa-solid fa-wrench"></i>
+                        GET SERVICE TODAY
+                    </a>
+                    <a href="tel:2524174854" 
+                       class="border border-zinc-700 hover:border-red-500 px-8 py-4 rounded-2xl font-medium inline-flex items-center gap-2 transition-all">
+                        <i class="fa-solid fa-phone"></i>
+                        (252) 417-4854
+                    </a>
+                </div>
+                
+                <div class="mt-12 flex items-center gap-8 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-red-500"></i>
+                        <span>Fast &amp; Reliable</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-red-500"></i>
+                        <span>Fair Prices</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-red-500"></i>
+                        <span>Satisfaction Guaranteed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating badge -->
+        <div class="absolute bottom-12 right-12 bg-black/80 backdrop-blur-md px-6 py-4 rounded-3xl border border-red-900 hidden lg:flex items-center gap-4">
+            <div class="text-4xl">🔊</div>
+            <div>
+                <div class="font-mono text-red-400 text-sm">NOW OFFERING</div>
+                <div class="font-semibold">Premium Audio Installs</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trust Bar -->
+    <div class="bg-zinc-900 py-5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-x-12 gap-y-4 text-sm items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-car text-red-500 text-2xl"></i>
+                <div>
+                    <div class="font-semibold">Mobile Mechanic</div>
+                    <div class="text-zinc-400 text-xs">We come to your location</div>
+                </div>
+            </div>
+            <div class="h-8 w-px bg-zinc-800"></div>
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-headphones text-red-500 text-2xl"></i>
+                <div>
+                    <div class="font-semibold">Expert Audio</div>
+                    <div class="text-zinc-400 text-xs">Car stereos &amp; sound systems</div>
+                </div>
+            </div>
+            <div class="h-8 w-px bg-zinc-800"></div>
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-shield-halved text-red-500 text-2xl"></i>
+                <div>
+                    <div class="font-semibold">Honest Service</div>
+                    <div class="text-zinc-400 text-xs">No hidden fees</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-4 py-2 bg-red-900/50 text-red-400 text-sm rounded-full font-medium">OUR SERVICES</span>
+                <h2 class="text-5xl font-bold mt-4 tracking-tight">Professional Auto Repair</h2>
+                <p class="text-zinc-400 mt-3 max-w-md mx-auto">Fast, convenient, and professional service at your location</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service Cards -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-red-600/10 text-red-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🔧</div>
+                    <h3 class="text-2xl font-semibold mb-2">Engine Diagnostics &amp; Repair</h3>
+                    <p class="text-zinc-400">Advanced diagnostics and expert engine repairs performed at your doorstep.</p>
+                </div>
+                
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-red-600/10 text-red-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🛑</div>
+                    <h3 class="text-2xl font-semibold mb-2">Brake Service</h3>
+                    <p class="text-zinc-400">Pad replacement, rotor service, and complete brake system inspections.</p>
+                </div>
+                
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-red-600/10 text-red-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🔋</div>
+                    <h3 class="text-2xl font-semibold mb-2">Battery Test &amp; Replacement</h3>
+                    <p class="text-zinc-400">Free battery testing and quick replacement service.</p>
+                </div>
+                
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-red-600/10 text-red-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🛢️</div>
+                    <h3 class="text-2xl font-semibold mb-2">Oil Changes</h3>
+                    <p class="text-zinc-400">Full synthetic, conventional, and high-mileage oil changes.</p>
+                </div>
+                
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-red-600/10 text-red-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🛞</div>
+                    <h3 class="text-2xl font-semibold mb-2">Tire Services</h3>
+                    <p class="text-zinc-400">Rotations, balancing, flat repairs, and new tire installations.</p>
+                </div>
+                
+                <div class="service-card bg-zinc-900 border border-red-900/50 rounded-3xl p-8 relative overflow-hidden">
+                    <div class="absolute top-6 right-6 text-red-500">
+                        <i class="fa-solid fa-star text-4xl"></i>
+                    </div>
+                    <div class="w-14 h-14 bg-red-600/10 text-red-500 rounded-2xl flex items-center justify-center text-3xl mb-6">🔊</div>
+                    <h3 class="text-2xl font-semibold mb-2">Custom Audio Systems</h3>
+                    <p class="text-zinc-400">Premium car stereo, speaker, subwoofer, and amplifier installations.</p>
+                    <span class="inline-block mt-6 text-xs tracking-widest bg-red-900 text-red-300 px-3 py-1 rounded-full">SPECIALTY SERVICE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Highlight -->
+    <section id="audio" class="speaker-bg py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold leading-tight mb-6">Turn Up The Volume</h2>
+                    <p class="text-2xl text-zinc-300 mb-10">Expert car audio installations that sound as good as they look.</p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <div class="text-red-500 mt-1">→</div>
+                            <div>
+                                <div class="font-semibold text-xl">Car Stereo Installation</div>
+                                <div class="text-zinc-400">Android Auto &amp; Apple CarPlay head units</div>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="text-red-500 mt-1">→</div>
+                            <div>
+                                <div class="font-semibold text-xl">Speakers &amp; Subwoofers</div>
+                                <div class="text-zinc-400">Premium sound upgrades for any vehicle</div>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="text-red-500 mt-1">→</div>
+                            <div>
+                                <div class="font-semibold text-xl">Amplifiers &amp; Custom Builds</div>
+                                <div class="text-zinc-400">High-performance audio systems</div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="inline-flex mt-10 items-center gap-3 group">
+                        <span class="text-red-400 group-hover:text-red-500 transition-colors">Book your audio upgrade →</span>
+                    </a>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700">
+                        <img src="https://picsum.photos/id/1015/800/600" alt="Car Audio System" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-black border border-red-900 rounded-3xl p-6 max-w-[220px]">
+                        <div class="flex items-center gap-4">
+                            <div class="text-5xl">🔊</div>
+                            <div class="text-sm">
+                                <div class="font-mono text-red-400">THUMPING BASS</div>
+                                <div class="font-semibold">Crystal Clear Sound</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-5">
+                    <img src="https://picsum.photos/id/201/800/900" alt="Mechanic at work" 
+                         class="rounded-3xl shadow-2xl">
+                </div>
+                <div class="md:col-span-7">
+                    <div class="max-w-lg">
+                        <h2 class="text-5xl font-bold tracking-tighter mb-8">Mobile Auto Repair You Can Trust</h2>
+                        <div class="space-y-8 text-lg text-zinc-300">
+                            <p>We bring the garage to you. Whether you're at home, work, or stranded on the side of the road — F&amp;N Mobile Auto Repair delivers professional service with honesty and integrity.</p>
+                            <p>From routine maintenance to complex repairs and premium audio installations, our certified technicians ensure your vehicle gets the care it deserves.</p>
+                        </div>
+                        
+                        <div class="mt-12 grid grid-cols-3 gap-6 text-center">
+                            <div>
+                                <div class="text-4xl font-mono font-bold text-red-500">5+</div>
+                                <div class="text-sm text-zinc-400 mt-1">YEARS EXPERIENCE</div>
+                            </div>
+                            <div>
+                                <div class="text-4xl font-mono font-bold text-red-500">100%</div>
+                                <div class="text-sm text-zinc-400 mt-1">MOBILE SERVICE</div>
+                            </div>
+                            <div>
+                                <div class="text-4xl font-mono font-bold text-red-500">24/7</div>
+                                <div class="text-sm text-zinc-400 mt-1">AVAILABILITY</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="bg-red-600 py-20">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-5xl font-bold mb-6">Ready for Reliable Auto Service?</h2>
+            <p class="text-xl mb-10 text-red-100">Call or text us today. Service in your area with fast response times.</p>
+            
+            <a href="tel:2524174854" 
+               class="inline-flex items-center gap-4 bg-black hover:bg-zinc-900 text-white text-3xl font-mono tracking-wider px-16 py-8 rounded-3xl transition-all">
+                <i class="fa-solid fa-phone"></i>
+                (252) 417-4854
+            </a>
+            
+            <p class="mt-8 text-sm text-red-200">Serving Eastern North Carolina • Same day appointments available</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-2xl flex items-center justify-center text-white font-black text-4xl">F&amp;N</div>
+                        <div class="text-3xl font-bold">Mobile Auto Repair</div>
+                    </div>
+                    <p class="max-w-xs text-zinc-400">Professional mobile mechanic and premium car audio installation services.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+                    <div>
+                        <div class="font-semibold mb-4 text-red-400">SERVICES</div>
+                        <ul class="space-y-2 text-sm text-zinc-400">
+                            <li>Engine Repair</li>
+                            <li>Brakes</li>
+                            <li>Oil Changes</li>
+                            <li>Tire Service</li>
+                            <li>Battery Service</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="font-semibold mb-4 text-red-400">AUDIO</div>
+                        <ul class="space-y-2 text-sm text-zinc-400">
+                            <li>Stereo Installation</li>
+                            <li>Speakers &amp; Subs</li>
+                            <li>Amplifiers</li>
+                            <li>Custom Builds</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="font-semibold mb-4 text-red-400">CONTACT</div>
+                        <div class="space-y-3">
+                            <a href="tel:2524174854" class="block hover:text-red-400 transition-colors">
+                                <i class="fa-solid fa-phone mr-2"></i> (252) 417-4854
+                            </a>
+                            <div class="text-sm text-zinc-500">
+                                Text or Call<br>
+                                Available 7 days
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-zinc-900 mt-16 pt-8 text-center text-xs text-zinc-500">
+                © 2026 F&amp;N Mobile Auto Repair. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already included via CDN
+        console.log('%cF&N Mobile Auto Repair - Website Loaded', 'color: #e63939; font-weight: bold');
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```
